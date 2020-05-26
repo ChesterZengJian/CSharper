@@ -1,0 +1,20 @@
+﻿@*@model int*@
+@model HandleErrorInfo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        The value was @(((ArgumentOutOfRangeException)Model.Exception).ActualValue) out of the expected range.
+    </div>
+</body>
+</html>

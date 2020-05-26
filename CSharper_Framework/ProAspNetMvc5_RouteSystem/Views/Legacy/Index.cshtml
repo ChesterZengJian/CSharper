@@ -1,0 +1,11 @@
+﻿@model string
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Legacy</h2>
+
+The URL was : @Model
+<br />
+ActionLink: @Html.ActionLink("Clike me","Index",new { legacyURL="/articles/windows_old_page"})

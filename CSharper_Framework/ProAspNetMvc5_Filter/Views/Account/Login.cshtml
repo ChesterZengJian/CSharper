@@ -1,0 +1,29 @@
+﻿@model ProAspNetMvc5_Filter.Models.User
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Admin Login</h2>
+
+<form action="/Account/Login" method="post">
+    <div>
+        User Name: <input type="text" name="username" value="admin" />
+    </div>
+    <div>
+        User Passwork: <input type="password" name="password" value="123456" />
+    </div>
+    <button>Submit</button>
+</form>
+
+<h2>Traveller Login</h2>
+
+<form action="/Account/Login" method="post">
+    <div>
+        User Name: <input type="text" name="username" value="traveller" />
+    </div>
+    <div>
+        User Passwork: <input type="password" name="password" value="123456" />
+    </div>
+    <button>Submit</button>
+</form>
