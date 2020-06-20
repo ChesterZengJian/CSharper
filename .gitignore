@@ -354,3 +354,5 @@ healthchecksdb
 
 # End of https://www.gitignore.io/api/visualstudio
 source/VERSION/config/rms.cfg
+/CSharper_Core/SwaggerDemo/Properties/launchSettings.json
+*.json

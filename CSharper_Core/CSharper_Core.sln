@@ -5,13 +5,15 @@ VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SignalR", "SignalR", "{047D90EA-4604-43A1-A64B-5FFA5ADADE88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncCounter", "SyncCounter\SyncCounter.csproj", "{2462F734-F546-44C4-B937-0E8189348E5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyncCounter", "SyncCounter\SyncCounter.csproj", "{2462F734-F546-44C4-B937-0E8189348E5E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Swagger", "Swagger", "{52C755B4-2B26-47A8-B3D3-6817D3FCEC6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerConfiguration", "SwaggerConfiguration\SwaggerConfiguration.csproj", "{504F8B85-54E7-42EF-8044-CD0F5F632EC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwaggerConfiguration", "SwaggerConfiguration\SwaggerConfiguration.csproj", "{504F8B85-54E7-42EF-8044-CD0F5F632EC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerControllers", "SwaggerControllers\SwaggerControllers.csproj", "{2D3240EE-22FD-4EDE-833C-1F94DF9F7BC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwaggerControllers", "SwaggerControllers\SwaggerControllers.csproj", "{2D3240EE-22FD-4EDE-833C-1F94DF9F7BC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerDemo", "SwaggerDemo\SwaggerDemo.csproj", "{EB8C32E7-BB67-40B5-85F7-E5EFB3CB3246}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{2D3240EE-22FD-4EDE-833C-1F94DF9F7BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D3240EE-22FD-4EDE-833C-1F94DF9F7BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D3240EE-22FD-4EDE-833C-1F94DF9F7BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB8C32E7-BB67-40B5-85F7-E5EFB3CB3246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB8C32E7-BB67-40B5-85F7-E5EFB3CB3246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB8C32E7-BB67-40B5-85F7-E5EFB3CB3246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB8C32E7-BB67-40B5-85F7-E5EFB3CB3246}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{2462F734-F546-44C4-B937-0E8189348E5E} = {047D90EA-4604-43A1-A64B-5FFA5ADADE88}
 		{504F8B85-54E7-42EF-8044-CD0F5F632EC0} = {52C755B4-2B26-47A8-B3D3-6817D3FCEC6E}
 		{2D3240EE-22FD-4EDE-833C-1F94DF9F7BC0} = {52C755B4-2B26-47A8-B3D3-6817D3FCEC6E}
+		{EB8C32E7-BB67-40B5-85F7-E5EFB3CB3246} = {52C755B4-2B26-47A8-B3D3-6817D3FCEC6E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AE9B06B-90CA-4B68-939A-30E8DC70B239}
