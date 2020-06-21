@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwaggerControllers", "Swagg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerDemo", "SwaggerDemo\SwaggerDemo.csproj", "{EB8C32E7-BB67-40B5-85F7-E5EFB3CB3246}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Autofac", "Autofac", "{7A5A2A74-E395-4572-9C01-A7AD37286156}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacDemo", "AutofacDemo\AutofacDemo.csproj", "{C8053867-BE6E-4DB3-BDC1-FB20AEB5815B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,10 @@ Global
 		{EB8C32E7-BB67-40B5-85F7-E5EFB3CB3246}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB8C32E7-BB67-40B5-85F7-E5EFB3CB3246}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB8C32E7-BB67-40B5-85F7-E5EFB3CB3246}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8053867-BE6E-4DB3-BDC1-FB20AEB5815B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8053867-BE6E-4DB3-BDC1-FB20AEB5815B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8053867-BE6E-4DB3-BDC1-FB20AEB5815B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8053867-BE6E-4DB3-BDC1-FB20AEB5815B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +54,7 @@ Global
 		{504F8B85-54E7-42EF-8044-CD0F5F632EC0} = {52C755B4-2B26-47A8-B3D3-6817D3FCEC6E}
 		{2D3240EE-22FD-4EDE-833C-1F94DF9F7BC0} = {52C755B4-2B26-47A8-B3D3-6817D3FCEC6E}
 		{EB8C32E7-BB67-40B5-85F7-E5EFB3CB3246} = {52C755B4-2B26-47A8-B3D3-6817D3FCEC6E}
+		{C8053867-BE6E-4DB3-BDC1-FB20AEB5815B} = {7A5A2A74-E395-4572-9C01-A7AD37286156}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AE9B06B-90CA-4B68-939A-30E8DC70B239}
