@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Autofac;
 using Autofac.Core;
 using Autofac.Extensions.DependencyInjection;
+using Autofac.Extras.DynamicProxy;
+using AutofacDemo.Interceptors;
 using AutofacDemo.Models;
 using AutofacDemo.Services;
 using AutofacDemo.Services.Impl;
@@ -84,8 +86,16 @@ namespace AutofacDemo
 
             #region Delegate Factory
 
-            builder.RegisterType<Shareholdings>();
+            //builder.RegisterType<Shareholdings>();
 
+            #endregion
+
+            #region AOP
+
+            builder.RegisterType<UserInterceptorServiceImpl>()
+                .As<IUserInterceptorService<User>>()
+                .EnableInterfaceInterceptors();
+            builder.RegisterType<UserInterceptor>();
 
             #endregion
         }

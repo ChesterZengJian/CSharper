@@ -1,8 +1,10 @@
 ﻿using Autofac;
 using Autofac.Core;
+using AutofacDemo.Models;
 using AutofacDemo.Services;
 using AutofacDemo.Services.Impl;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace AutofacDemo.Controllers
 {
@@ -83,16 +85,33 @@ namespace AutofacDemo.Controllers
 
         #region Delegate Factory
 
-        private readonly Shareholdings.Factory m_factory;
-        public AccountsController(Shareholdings.Factory factory)
-        {
-            m_factory = factory;
-        }
+        //private readonly Shareholdings.Factory m_factory;
+        //public AccountsController(Shareholdings.Factory factory)
+        //{
+        //    m_factory = factory;
+        //}
 
-        public string Get()
-        {
-            return m_factory("sh", 12).Symbol;
-        }
+        //public string Get()
+        //{
+        //    return m_factory("sh", 12).Symbol;
+        //}
+
+        #endregion
+
+        #region AOP
+
+    private IUserInterceptorService<User> m_userInterceptorService;
+
+    public AccountsController(IUserInterceptorService<User> userInterceptorService)
+    {
+        m_userInterceptorService = userInterceptorService;
+    }
+
+    public async Task<string> Get()
+    {
+        var user = await m_userInterceptorService.AddUser(new User { Name = "Test AOP" });
+        return user.Name;
+    }
 
         #endregion
     }
