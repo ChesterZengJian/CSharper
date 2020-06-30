@@ -33,9 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiltersDemo", "FiltersDemo\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQ", "RabbitMQ", "{8751FB68-EDC0-430C-9753-83337B09E78A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitmqConsumer", "RabbitmqConsumer\RabbitmqConsumer.csproj", "{519E149B-9EAD-4B08-9646-68DAD98F0C29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitmqConsumer", "RabbitmqConsumer\RabbitmqConsumer.csproj", "{519E149B-9EAD-4B08-9646-68DAD98F0C29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitmqProducer", "RabbitmqProducer\RabbitmqProducer.csproj", "{D374FD84-D260-40D4-B527-8B4BEFC4AC33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitmqProducer", "RabbitmqProducer\RabbitmqProducer.csproj", "{D374FD84-D260-40D4-B527-8B4BEFC4AC33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelValidationDemo", "ModelValidationDemo\ModelValidationDemo.csproj", "{AA8A825E-E899-4103-AD22-79D0AA07EEE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{D374FD84-D260-40D4-B527-8B4BEFC4AC33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D374FD84-D260-40D4-B527-8B4BEFC4AC33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D374FD84-D260-40D4-B527-8B4BEFC4AC33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA8A825E-E899-4103-AD22-79D0AA07EEE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA8A825E-E899-4103-AD22-79D0AA07EEE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA8A825E-E899-4103-AD22-79D0AA07EEE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA8A825E-E899-4103-AD22-79D0AA07EEE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +109,7 @@ Global
 		{F1E09A23-AE3C-4C06-B059-3D4DAA44979F} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
 		{519E149B-9EAD-4B08-9646-68DAD98F0C29} = {8751FB68-EDC0-430C-9753-83337B09E78A}
 		{D374FD84-D260-40D4-B527-8B4BEFC4AC33} = {8751FB68-EDC0-430C-9753-83337B09E78A}
+		{AA8A825E-E899-4103-AD22-79D0AA07EEE2} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AE9B06B-90CA-4B68-939A-30E8DC70B239}
