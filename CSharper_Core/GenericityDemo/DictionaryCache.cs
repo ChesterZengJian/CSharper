@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GenericityDemo
 {
-    class DictionaryCache<T>
+    class DictionaryCache
     {
         private static Dictionary<Type, string> _dictionaryCache;
 

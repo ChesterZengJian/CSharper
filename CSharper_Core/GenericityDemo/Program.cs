@@ -11,59 +11,68 @@ namespace GenericityDemo
     {
         static void Main(string[] args)
         {
-            //{
-            //    var dictionaryCache = new DictionaryCache<int>();
-            //    Console.WriteLine(dictionaryCache.GetCache<int>());
-            //    Thread.Sleep(2000);
-            //    Console.WriteLine(dictionaryCache.GetCache<int>());
-            //    Thread.Sleep(2000);
-            //    Console.WriteLine(dictionaryCache.GetCache<int>());
+            {
+                //var dictionaryCache = new DictionaryCache();
+                //Console.WriteLine(dictionaryCache.GetCache<int>());
+                //Thread.Sleep(2000);
+                //Console.WriteLine(dictionaryCache.GetCache<int>());
+                //Thread.Sleep(2000);
+                //Console.WriteLine(dictionaryCache.GetCache<string>());
+                //Thread.Sleep(2000);
+                //Console.WriteLine(dictionaryCache.GetCache<int>());
 
-            //    Console.WriteLine(Compare(3.0f, 3.0f));
+                var genericIntCache = new GenericCache<int>();
+                Console.WriteLine(genericIntCache.GetCache());
+                Thread.Sleep(2000);
+                Console.WriteLine(genericIntCache.GetCache());
+                Thread.Sleep(2000);
+                var genericStrCache = new GenericCache<string>();
+                Console.WriteLine(genericStrCache.GetCache());
+                Thread.Sleep(2000);
+                Console.WriteLine(genericIntCache.GetCache());
+            }
 
-            //    Console.WriteLine(Compare<int>(3, 5));
-            //}
 
-            //{
-            //    var stopwatch1 = new Stopwatch();
-            //    stopwatch1.Start();
-            //    for (int i = 0; i < 100_000_000; i++)
-            //        ShowObj(i);
-            //    stopwatch1.Stop();
+            {
+                //var stopwatch1 = new Stopwatch();
+                //stopwatch1.Start();
+                //for (int i = 0; i < 100_000_000; i++)
+                //    ShowObj(i);
+                //stopwatch1.Stop();
 
-            //    var stopwatch2 = new Stopwatch();
-            //    stopwatch2.Start();
-            //    for (int i = 0; i < 100_000_000; i++)
-            //        Show<int>(i);
-            //    stopwatch2.Stop();
+                //var stopwatch2 = new Stopwatch();
+                //stopwatch2.Start();
+                //for (int i = 0; i < 100_000_000; i++)
+                //    Show<int>(i);
+                //stopwatch2.Stop();
 
-            //    var stopwatch3 = new Stopwatch();
-            //    stopwatch3.Start();
-            //    for (int i = 0; i < 100_000_000; i++)
-            //        ShowInt(i);
-            //    stopwatch3.Stop();
+                //var stopwatch3 = new Stopwatch();
+                //stopwatch3.Start();
+                //for (int i = 0; i < 100_000_000; i++)
+                //    ShowInt(i);
+                //stopwatch3.Stop();
 
-            //    Console.WriteLine($"ShowObj:{stopwatch1.ElapsedMilliseconds}");
-            //    Console.WriteLine($"Show Generic: {stopwatch2.ElapsedMilliseconds}");
-            //    Console.WriteLine($"ShowInt :{stopwatch3.ElapsedMilliseconds}");
-            //}
+                //Console.WriteLine($"ShowObj:{stopwatch1.ElapsedMilliseconds}");
+                //Console.WriteLine($"Show Generic: {stopwatch2.ElapsedMilliseconds}");
+                //Console.WriteLine($"ShowInt :{stopwatch3.ElapsedMilliseconds}");
+            }
 
-            //{
-            //    Show<Chinese, People>();
-            //    Show<People, Chinese>(); // Error
-            //}
+            {
+                //Show<Chinese, People>();
+                //Show<People, Chinese>(); // Error
+            }
 
-            //{
-            //    //Chinese chinese = (Chinese)(new People()); // Error
+            {
+                //Chinese chinese = (Chinese)(new People()); // Error
 
-            //    //List<People> peoples = new List<Chinese>(); // Error
+                //List<People> peoples = new List<Chinese>(); // Error
 
-            //    //IEnumerable<People> peoples = new List<Chinese>();
+                //IEnumerable<People> peoples = new List<Chinese>();
 
-            //    //ICustomListOut<People> customListOut = new CustomListOut<Chinese>(); // 协变
-            //    //ICustomListIn<Chinese> customListIn = new CustomListIn<People>();
+                //ICustomListOut<People> customListOut = new CustomListOut<Chinese>(); // 协变
+                //ICustomListIn<Chinese> customListIn = new CustomListIn<People>();
 
-            //}
+            }
 
             {
                 //ArrayList products = new ArrayList();
@@ -83,18 +92,18 @@ namespace GenericityDemo
                 //};
                 //products.Sort(new ProductNameComparerGeneric());
 
-                List<Product> products = new List<Product>
-                {
-                    new Product("p2"),
-                    new Product("p1"),
-                    new Product("p3")
-                };
-                products.Sort(delegate (Product x, Product y) { return x.Name.CompareTo(y.Name); });
+                //List<Product> products = new List<Product>
+                //{
+                //    new Product("p2"),
+                //    new Product("p1"),
+                //    new Product("p3")
+                //};
+                //products.Sort(delegate (Product x, Product y) { return x.Name.CompareTo(y.Name); });
 
-                foreach (var product in products)
-                {
-                    Console.WriteLine(((Product)product).Name);
-                }
+                //foreach (var product in products)
+                //{
+                //    Console.WriteLine(((Product)product).Name);
+                //}
             }
 
             Console.Read();
