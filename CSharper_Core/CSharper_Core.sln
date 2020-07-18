@@ -57,6 +57,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReflectionDemo", "Reflectio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReflectionDemo.DLL", "ReflectionDemo.DLL\ReflectionDemo.DLL.csproj", "{7F370A57-BFCF-4A89-9FB3-F932D7953BB3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesignPatterns", "DesignPatterns", "{5747C41E-1F93-4776-B546-6CF0620AD4EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Construction", "Construction\Construction.csproj", "{A7A6EB13-7A6A-44B8-9F9A-B93E395C0B32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,6 +143,10 @@ Global
 		{7F370A57-BFCF-4A89-9FB3-F932D7953BB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F370A57-BFCF-4A89-9FB3-F932D7953BB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F370A57-BFCF-4A89-9FB3-F932D7953BB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7A6EB13-7A6A-44B8-9F9A-B93E395C0B32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7A6EB13-7A6A-44B8-9F9A-B93E395C0B32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7A6EB13-7A6A-44B8-9F9A-B93E395C0B32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7A6EB13-7A6A-44B8-9F9A-B93E395C0B32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -163,6 +171,7 @@ Global
 		{403712F5-1D3B-420D-AF46-F1F463976D93} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
 		{5E2866CC-C6C4-4522-B590-1C7C1316F464} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
 		{7F370A57-BFCF-4A89-9FB3-F932D7953BB3} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
+		{A7A6EB13-7A6A-44B8-9F9A-B93E395C0B32} = {5747C41E-1F93-4776-B546-6CF0620AD4EA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AE9B06B-90CA-4B68-939A-30E8DC70B239}
