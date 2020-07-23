@@ -8,10 +8,10 @@ namespace DelegateDemo.Extensions
     {
         public void Show()
         {
-            Action action = new Action(Method);
+            var action = new Action(Method);
 
             var methodInfo = this.GetType().GetMethod("Method");
-            if (methodInfo.IsDefined(typeof(BeforeMethodAttribute), true))
+            if (methodInfo != null && methodInfo.IsDefined(typeof(BeforeMethodAttribute), true))
             {
                 methodInfo.GetCustomAttribute<BeforeMethodAttribute>().Do(action);
             }
