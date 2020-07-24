@@ -24,8 +24,8 @@ namespace DelegateDemo
             }
 
             {
-                var customDelegateExtension = new Delegates.CustomDelegateExtension();
-                customDelegateExtension.Show();
+                //var customDelegateExtension = new Delegates.CustomDelegateExtension();
+                //customDelegateExtension.Show();
             }
 
             {
@@ -43,6 +43,14 @@ namespace DelegateDemo
                 //    Order = 2
                 //};
                 //Compare<People>(p1, p2, (t1, t2) => t1.Order > t2.Order);
+            }
+
+
+            {
+                var fish = new Fish();
+                fish.Action += new Fishermen().PullHook;
+                fish.Action += new FishFloat().Move;
+                fish.Eat();
             }
         }
 
