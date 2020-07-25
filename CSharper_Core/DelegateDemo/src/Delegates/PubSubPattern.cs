@@ -2,28 +2,28 @@
 
 namespace DelegateDemo.Delegates
 {
-public class Fishermen
-{
-    public void PullHook()
+    public class Fishermen
     {
-        Console.WriteLine("Pull hook");
+        public void PullHook()
+        {
+            Console.WriteLine("Pull hook");
+        }
     }
-}
 
-public class Fish
-{
-    public Action Action { get; set; }
-    public void Eat()
+    public class Fish
     {
-        Action?.Invoke();
+        public Action Handler { get; set; }
+        public void Eat()
+        {
+            Handler?.Invoke();
+        }
     }
-}
 
-public class FishFloat
-{
-    public void Move()
+    public class FishFloat
     {
-        Console.WriteLine("Move Fish Float");
+        public void Move()
+        {
+            Console.WriteLine("Move Fish Float");
+        }
     }
-}
 }

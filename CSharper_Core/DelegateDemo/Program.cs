@@ -48,8 +48,8 @@ namespace DelegateDemo
 
             {
                 var fish = new Fish();
-                fish.Action += new Fishermen().PullHook;
-                fish.Action += new FishFloat().Move;
+                fish.Handler += new Fishermen().PullHook;
+                fish.Handler += new FishFloat().Move;
                 fish.Eat();
             }
         }
