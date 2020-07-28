@@ -12,58 +12,73 @@ namespace ExpressionDemo
     {
         static void Main(string[] args)
         {
-            //{
-            //    new List<int>().Where(a => a > 10);
-            //    new List<int>().AsQueryable().Where(a => a > 10);
-            //}
+            {
+                //Expression<Func<People, bool>> expression = x => x.Name == "fsd";
+                //new List<People>().AsQueryable().Where(x => x.Name == "a" && x.Sex == "m");
+            }
 
-            //{
-            //    Func<int, int, int> func = (m, n) => m * n + 2;
-            //    //Expression<Func<int, int, int>> exp = (m, n) => m * n + 2 + 3;
-            //    Expression<Func<int, int, int>> exp = (m, n) => Sum(m, n);
+            {
 
-            //    Console.WriteLine(func.Invoke(3, 5));
-            //    Console.WriteLine(exp.Compile().Invoke(3, 5));
-            //}
+                Expression<Func<People, bool>> expr1 = i => i.Age <= 30;
+                Expression<Func<People, bool>> expr2 = (j) => j.Age >= 10;
+                var expr = expr1.And(expr2);
+                Console.WriteLine(expr.Compile().Invoke(new People { Name = "Chester", Age = 12 }));
+                //var exprError = Expression.Lambda<Func<People, bool>>(Expression.AndAlso(expr1.Body, expr2.Body));
+                //exprError.Compile().Invoke(new People { Name = "Chester", Age = 12 });
+            }
 
-            //{
-            //    ConstantExpression left = Expression.Constant(123, typeof(int));
-            //    ConstantExpression right = Expression.Constant(32, typeof(int));
-            //    var plus = Expression.Add(left, right);
-            //    Expression<Func<int>> expression = Expression.Lambda<Func<int>>(plus, null);
-            //    Console.WriteLine(expression.Compile().Invoke());
-            //}
+            {
+                //new List<int>().Where(a => a > 10);
+                //new List<int>().AsQueryable().Where(a => a > 10);
+            }
 
-            //{
-            //    var left = Expression.Constant(123, typeof(int));
-            //    var right = Expression.Parameter(typeof(int));
-            //    var plus = Expression.Add(left, right);
-            //    var express = Expression.Lambda<Func<int, int>>(plus, new ParameterExpression[]
-            //    {
-            //        right
-            //    });
-            //    Console.WriteLine(express.Compile().Invoke(3));
-            //}
+            {
+                //Func<int, int, int> func = (m, n) => m * n + 2;
+                ////Expression<Func<int, int, int>> exp = (m, n) => m * n + 2 + 3;
+                //Expression<Func<int, int, int>> exp = (m, n) => Sum(m, n);
 
-            //{
-            //    MethodInfo toString = typeof(int).GetMethod(nameof(int.ToString), new Type[] { });
-            //    var constantExpr = Expression.Constant(123, typeof(int));
-            //    MethodCallExpression method = Expression.Call(constantExpr, toString);
-            //    Console.WriteLine(Expression.Lambda<Func<string>>(method, null).Compile().Invoke());
-            //}
+                //Console.WriteLine(func.Invoke(3, 5));
+                //Console.WriteLine(exp.Compile().Invoke(3, 5));
+            }
 
-            //{
-            //    var sql = $"select * from users";
+            {
+                //ConstantExpression left = Expression.Constant(123, typeof(int));
+                //ConstantExpression right = Expression.Constant(32, typeof(int));
+                //var plus = Expression.Add(left, right);
+                //Expression<Func<int>> expression = Expression.Lambda<Func<int>>(plus, null);
+                //Console.WriteLine(expression.Compile().Invoke());
+            }
 
-            //    Console.WriteLine($"Input your name:");
-            //    var name = Console.ReadLine();
-            //    if (!string.IsNullOrEmpty(name))
-            //    {
-            //        sql += $" where name='{name}' ";
-            //    }
+            {
+                //var left = Expression.Constant(123, typeof(int));
+                //var right = Expression.Parameter(typeof(int));
+                //var plus = Expression.Add(left, right);
+                //var express = Expression.Lambda<Func<int, int>>(plus, new ParameterExpression[]
+                //{
+                //    right
+                //});
+                //Console.WriteLine(express.Compile().Invoke(3));
+            }
 
-            //    Console.WriteLine(sql);
-            //}
+            {
+                //MethodInfo toString = typeof(int).GetMethod(nameof(int.ToString), new Type[] { });
+                //var constantExpr = Expression.Constant(123, typeof(int));
+                //MethodCallExpression method = Expression.Call(constantExpr, toString);
+                //Console.WriteLine(Expression.Lambda<Func<string>>(method, null).Compile().Invoke());
+            }
+
+            {
+                //var sql = $"select * from users";
+
+                //Console.WriteLine($"Input your name:");
+                //var name = Console.ReadLine();
+                //if (!string.IsNullOrEmpty(name))
+                //{
+                //    sql += $" where name='{name}' ";
+                //}
+
+                //Console.WriteLine(sql);
+            }
 
             {
                 //var dbSet = new List<People>().AsQueryable();
@@ -90,11 +105,11 @@ namespace ExpressionDemo
             }
 
             {
-                People people = new People()
-                {
-                    Name = "chester",
-                    Sex = "m"
-                };
+                //People people = new People()
+                //{
+                //    Name = "chester",
+                //    Sex = "m"
+                //};
                 //PeopleCopy peopleCopy = new PeopleCopy()
                 //{
                 //    Name = people.Name,
@@ -106,12 +121,12 @@ namespace ExpressionDemo
 
                 //Console.WriteLine($"{peopleCopy.Name}");
 
-                var expression = new OperationsVisitor();
-                expression.Modify(p => p.Name == "dfaf" && p.Sex == "n" && p.Name == "afsaasf");
+                //var expression = new OperationsVisitor();
+                //expression.Modify(p => p.Name == "dfaf" && p.Sex == "n" && p.Name == "afsaasf");
 
             }
 
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
         }
 
         static bool Find(People a, int b)
@@ -174,6 +189,7 @@ namespace ExpressionDemo
     {
         public string Name { get; set; }
         public string Sex { get; set; }
+        public int Age { get; set; }
     }
 
     class PeopleCopy
