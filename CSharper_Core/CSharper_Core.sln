@@ -71,6 +71,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegateDemo", "DelegateDem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AttributeDemo", "AttributeDemo\AttributeDemo.csproj", "{38039E89-34AD-4D43-93FB-6896A18917E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOSerializeDemo", "IOSerializeDemo\IOSerializeDemo.csproj", "{44163473-CE22-47AB-8DC7-E24130D84CF4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -173,6 +175,10 @@ Global
 		{38039E89-34AD-4D43-93FB-6896A18917E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38039E89-34AD-4D43-93FB-6896A18917E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38039E89-34AD-4D43-93FB-6896A18917E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44163473-CE22-47AB-8DC7-E24130D84CF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44163473-CE22-47AB-8DC7-E24130D84CF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44163473-CE22-47AB-8DC7-E24130D84CF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44163473-CE22-47AB-8DC7-E24130D84CF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -202,6 +208,7 @@ Global
 		{C96091EB-D410-4CF8-942D-E6292B36D716} = {E6B52613-A17E-4D79-859A-042A076113BB}
 		{36BAE785-3CFA-4EEC-9D5E-54339B9F42DB} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
 		{38039E89-34AD-4D43-93FB-6896A18917E3} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
+		{44163473-CE22-47AB-8DC7-E24130D84CF4} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AE9B06B-90CA-4B68-939A-30E8DC70B239}
