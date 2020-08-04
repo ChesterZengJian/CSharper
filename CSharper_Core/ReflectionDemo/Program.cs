@@ -68,27 +68,27 @@ namespace ReflectionDemo
             }
 
             {
-Type type = assembly.GetType($"{nameof(ReflectionDemo)}.{nameof(DLL)}.{nameof(DLL.Impl)}.{nameof(DLL.Impl.GenericReflectTestMethod)}");
-object objTest = Activator.CreateInstance(type);
-MethodInfo show1 = type.GetMethod("Show1");
-MethodInfo methodInfo =
-show1.MakeGenericMethod(new Type[] { typeof(int), typeof(string), typeof(DateTime) });
-methodInfo.Invoke(objTest, new object[] { 123, "asfas", DateTime.Now });
+                //Type type = assembly.GetType($"{nameof(ReflectionDemo)}.{nameof(DLL)}.{nameof(DLL.Impl)}.{nameof(DLL.Impl.GenericReflectTestMethod)}");
+                //object objTest = Activator.CreateInstance(type);
+                //MethodInfo show1 = type.GetMethod("Show1");
+                //MethodInfo methodInfo =
+                //show1.MakeGenericMethod(new Type[] { typeof(int), typeof(string), typeof(DateTime) });
+                //methodInfo.Invoke(objTest, new object[] { 123, "asfas", DateTime.Now });
 
-Type type = assembly.GetType($"{nameof(ReflectionDemo)}.{nameof(DLL)}.{nameof(DLL.Impl)}.GenericReflectTestClass`3");
-Type type1 = type.MakeGenericType(new Type[] { typeof(int), typeof(string), typeof(DateTime) });
-object objTest = Activator.CreateInstance(type1);
-MethodInfo show1 = type1.GetMethod("Show1");
-//MethodInfo genericShow1 = show1.MakeGenericMethod(new Type[] { typeof(int), typeof(string), typeof(DateTime) });
-show1.Invoke(objTest, new object[] { 123, "sdfa", DateTime.Now });
+                //Type type = assembly.GetType($"{nameof(ReflectionDemo)}.{nameof(DLL)}.{nameof(DLL.Impl)}.GenericReflectTestClass`3");
+                //Type type1 = type.MakeGenericType(new Type[] { typeof(int), typeof(string), typeof(DateTime) });
+                //object objTest = Activator.CreateInstance(type1);
+                //MethodInfo show1 = type1.GetMethod("Show1");
+                ////MethodInfo genericShow1 = show1.MakeGenericMethod(new Type[] { typeof(int), typeof(string), typeof(DateTime) });
+                //show1.Invoke(objTest, new object[] { 123, "sdfa", DateTime.Now });
 
-Type type = assembly.GetType(
-$"{nameof(ReflectionDemo)}.{nameof(DLL)}.{nameof(DLL.Impl)}.GenericReflectTestDouble`1");
-Type type1 = type.MakeGenericType(new Type[] { typeof(int) });
-object objTest = Activator.CreateInstance(type1);
-MethodInfo show1 = type1.GetMethod("Show1");
-MethodInfo genericShow1 = show1.MakeGenericMethod(new Type[] { typeof(string), typeof(DateTime) });
-genericShow1.Invoke(objTest, new object[] { 123, "asfa", DateTime.Now });
+                //Type type = assembly.GetType(
+                //$"{nameof(ReflectionDemo)}.{nameof(DLL)}.{nameof(DLL.Impl)}.GenericReflectTestDouble`1");
+                //Type type1 = type.MakeGenericType(new Type[] { typeof(int) });
+                //object objTest = Activator.CreateInstance(type1);
+                //MethodInfo show1 = type1.GetMethod("Show1");
+                //MethodInfo genericShow1 = show1.MakeGenericMethod(new Type[] { typeof(string), typeof(DateTime) });
+                //genericShow1.Invoke(objTest, new object[] { 123, "asfa", DateTime.Now });
 
             }
 
