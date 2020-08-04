@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
+using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace IOSerializeDemo
@@ -83,9 +86,44 @@ namespace IOSerializeDemo
                 //Console.WriteLine(Path.GetRandomFileName());
                 //Console.WriteLine(Path.GetFileNameWithoutExtension(@"D:\dr.txt"));
 
-                Console.WriteLine(Path.GetInvalidFileNameChars());
-                Console.WriteLine(Path.GetInvalidPathChars());
+                //Console.WriteLine(Path.GetInvalidFileNameChars());
+                //Console.WriteLine(Path.GetInvalidPathChars());
             }
+
+            {
+                //var directories = GetAllDirectory(@"F:\My_GitHubProject");
+            }
+
+            {
+
+
+            }
+        }
+
+        public static List<DirectoryInfo> GetAllDirectory(string rootPath)
+        {
+            if (!Directory.Exists(rootPath))
+            {
+                return new List<DirectoryInfo>();
+            }
+
+            var directoryInfos = new List<DirectoryInfo>();
+            var directory = new DirectoryInfo(rootPath);
+
+            return GetChild(directoryInfos, directory);
+        }
+
+        private static List<DirectoryInfo> GetChild(List<DirectoryInfo> directoryInfos, DirectoryInfo directory)
+        {
+            var childDirectories = directory.GetDirectories();
+            if (childDirectories.Length <= 0) return directoryInfos;
+            foreach (var childDirectory in childDirectories)
+            {
+                directoryInfos.Add(childDirectory);
+                GetChild(directoryInfos, childDirectory);
+            }
+
+            return directoryInfos;
         }
     }
 }
