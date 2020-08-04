@@ -6,7 +6,6 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.IO;
 using System.Reflection;
-using Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http;
 
 namespace SwaggerDemo
 {
@@ -16,7 +15,9 @@ namespace SwaggerDemo
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Latest);
+
+            services.AddSwaggerDocument();
 
             services.AddSwaggerGen(c =>
             {
@@ -61,7 +62,8 @@ namespace SwaggerDemo
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
+            app.UseOpenApi();
+            //app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SwaggerDemo.Models;
 
 namespace SwaggerDemo.Controllers
@@ -28,15 +29,12 @@ namespace SwaggerDemo.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public string Get(string id)
+        public ActionResult<UserOut> Get(int id)
         {
-            return "one user";
-        }
-
-        [HttpGet("user")]
-        public string Get(User user)
-        {
-            return "a user";
+            return new UserOut
+            {
+                Id = id
+            };
         }
 
         /// <summary>
