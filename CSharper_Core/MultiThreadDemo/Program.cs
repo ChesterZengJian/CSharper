@@ -10,6 +10,57 @@ namespace MultiThreadDemo
     {
         static async Task Main(string[] args)
         {
+            {
+                var manualResetEvent = new ManualResetEvent(false);
+                ThreadPool.QueueUserWorkItem(t =>
+                {
+                    Console.WriteLine("Begin Task");
+                    Thread.Sleep(
+                        
+                        3000);
+                    manualResetEvent.Set();
+                });
+                Console.WriteLine("Wait One");
+                if (manualResetEvent.WaitOne())
+                {
+                    Console.WriteLine("Completed");
+                }
+
+            }
+
+            {
+                //ThreadPool.QueueUserWorkItem(Console.WriteLine);
+                //ThreadPool.SetMaxThreads(12, 12);
+                //ThreadPool.GetMaxThreads(out var maxWorkThreads, out var maxCpThreads);
+                //ThreadPool.GetMinThreads(out var minWorkThreads, out var minCpThreads);
+                //Console.WriteLine($"workThreads={maxWorkThreads},cpThreads={maxCpThreads}");
+                //Console.WriteLine($"workThreads={minWorkThreads},cpThreads={minWorkThreads}");
+                //var manualResetEvent = new ManualResetEvent(false);
+                //for (var i = 0; i < 13; i++)
+                //{
+                //    var k = i;
+                //    ThreadPool.QueueUserWorkItem(t =>
+                //    {
+                //        Console.WriteLine($"Thread Id={Thread.CurrentThread.ManagedThreadId:00}");
+                //        if (k == 12)
+                //        {
+                //            manualResetEvent.Set();
+                //        }
+                //        else
+                //        {
+                //            //Console.WriteLine("Start wait");
+                //            manualResetEvent.WaitOne();
+                //            //Console.WriteLine("End wait");
+                //        }
+                //    });
+                //}
+
+                //if (manualResetEvent.WaitOne())
+                //{
+                //    Console.WriteLine("Completed");
+                //}
+            }
+
             #region SemaphoreSlim
 
             //for (int i = 1; i < 7; i++)
@@ -89,12 +140,12 @@ namespace MultiThreadDemo
             }
 
             {
-                Console.WriteLine(Environment.ProcessorCount);
+                //Console.WriteLine(Environment.ProcessorCount);
             }
 
             #endregion
 
-            Console.WriteLine("Enter exit");
+            //Console.WriteLine("Enter exit");
             Console.Read();
         }
 
