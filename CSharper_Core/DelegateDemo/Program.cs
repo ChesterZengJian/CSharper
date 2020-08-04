@@ -1,7 +1,8 @@
-﻿using DelegateDemo.Delegates;
-using System;
-using DelegateDemo.Extensions;
-using DelegateDemo.Models;
+﻿using System;
+using System.Collections.Generic;
+using DelegateDemo.Delegates;
+using DelegateDemo.src.Delegates;
+
 
 namespace DelegateDemo
 {
@@ -9,6 +10,30 @@ namespace DelegateDemo
     {
         static void Main(string[] args)
         {
+            {
+                //int.TryParse("2", out var result);
+
+                //var people = new People();
+                //people.Run();
+
+                //Console.WriteLine("Hello World".MaxStrShow(2));
+            }
+
+            {
+                var peoples = new List<People>()
+                {
+                    new People {Id = 1, Name = "p1"},
+                    new People {Id = 2, Name = "p2"},
+                    new People {Id = 3, Name = "p3"}
+                };
+
+                foreach (var people in peoples.PeopleWhere(p => p.Id >= 2 && p.Name == "p2"))
+                {
+                    Console.WriteLine(people.Id);
+                }
+
+            }
+
             {
                 //var customDelegate = new CustomDelegate();
                 //customDelegate.Show();
@@ -47,10 +72,10 @@ namespace DelegateDemo
 
 
             {
-                var fish = new Fish();
-                fish.Handler += new Fishermen().PullHook;
-                fish.Handler += new FishFloat().Move;
-                fish.Eat();
+                //var fish = new Fish();
+                //fish.Handler += new Fishermen().PullHook;
+                //fish.Handler += new FishFloat().Move;
+                //fish.Eat();
             }
         }
 
@@ -64,13 +89,49 @@ namespace DelegateDemo
 
     public class People
     {
+        private int State { get; set; }
         public int Id { get; set; }
         public string Name { get; set; }
         public int Order { get; set; }
 
+        public void Run()
+        {
+            Console.WriteLine("People run");
+        }
+
         public override string ToString()
         {
             return this.Name;
+        }
+    }
+
+    public static class PeopleExtension
+    {
+        public static void Run(this People people)
+        {
+            Console.WriteLine("People extension run");
+        }
+
+        public static List<People> PeopleWhere(this List<People> peoples, Predicate<People> predicate)
+        {
+            var newPeoples = new List<People>();
+            foreach (var people in peoples)
+            {
+                if (predicate(people))
+                {
+                    newPeoples.Add(people);
+                }
+            }
+
+            return newPeoples;
+        }
+    }
+
+    public static class StringExtension
+    {
+        public static string MaxStrShow(this string str, int maxLength)
+        {
+            return str.Substring(0, maxLength);
         }
     }
 }
