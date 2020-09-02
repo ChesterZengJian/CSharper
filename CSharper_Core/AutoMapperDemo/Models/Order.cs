@@ -8,9 +8,11 @@ namespace AutoMapperDemo.Models
 {
     public class Order
     {
-        public ActionResult<string> Get()
-        {
-            return "Orders";
-        }
+        public string Id { get; set; }
+    }
+
+    public class OrderDTO
+    {
+        public string Id { get; set; }
     }
 }
