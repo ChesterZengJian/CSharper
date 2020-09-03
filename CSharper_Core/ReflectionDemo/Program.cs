@@ -4,6 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Reflection;
 using ReflectionDemo.DLL.Impl;
+using ReflectionDemo.Models;
 
 namespace ReflectionDemo
 {
@@ -15,6 +16,27 @@ namespace ReflectionDemo
             //var typeName =
             //    $"{nameof(ReflectionDemo)}.{nameof(DLL)}.{nameof(DLL.Impl)}.{nameof(DLL.Impl.SqlDbHelper)}";
             var assembly = Assembly.Load(assemblyName);
+
+            {
+                //var orderType = typeof(Order);
+
+                //var obj = Activator.CreateInstance<Order>();
+
+                //foreach (var property in typeof(Order).GetProperties())
+                //{
+                //    Console.WriteLine(property.PropertyType == typeof(string));
+                //}
+
+                //object[] parameters = new object[1];
+                //char[] str = { 't', 'e', 's', 't' };
+                //parameters[0] = str;
+                //var obj = Activator.CreateInstance(typeof(string), parameters);
+                //Console.WriteLine(obj);
+
+                //var obj = Activator.CreateInstance(typeof(Order),new object[] { "Hello"});
+
+                var obj = Activator.CreateInstance(typeof(string), new char[] {  });
+            }
 
             {
                 //    //var assembly = Assembly.LoadFrom($"{assemblyName}.dll");
