@@ -1,0 +1,17 @@
+ 驱动器 C 中的卷没有标签。
+ 卷的序列号是 74C6-0334
+
+ c:\ 的目录
+
+2020/07/05  15:26    <DIR>          46wy0+yFYURQxdZvD3ukLhzaa4=
+2020/05/10  19:35    <DIR>          Foxmail 7.2
+2020/04/25  23:12    <DIR>          inetpub
+2020/05/24  16:25    <DIR>          PerfLogs
+2020/07/04  19:32    <DIR>          Program Files
+2020/08/17  21:33    <DIR>          Program Files (x86)
+2020/04/16  22:27    <DIR>          SQLServer2017Media
+2020/05/21  01:25    <DIR>          Temp
+2020/06/06  00:40    <DIR>          Users
+2020/08/15  01:25    <DIR>          Windows
+               0 个文件              0 字节
+              10 个目录 103,171,330,048 可用字节
