@@ -85,9 +85,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AutoMapper", "AutoMapper", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoMapperDemo", "AutoMapperDemo\AutoMapperDemo.csproj", "{EE90F728-290F-4D22-9D0B-54573FFD62A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHttpClientFactoryDemo", "IHttpClientFactoryDemo\IHttpClientFactoryDemo.csproj", "{104C72B3-4F6A-443E-B9CD-354010073DAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IHttpClientFactoryDemo", "IHttpClientFactoryDemo\IHttpClientFactoryDemo.csproj", "{104C72B3-4F6A-443E-B9CD-354010073DAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHttpClientFactoryDemo.Client1", "IHttpClientFactoryDemo.Client1\IHttpClientFactoryDemo.Client1.csproj", "{E662F3CB-034A-46C9-B5B5-681CED1E9B2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IHttpClientFactoryDemo.Client1", "IHttpClientFactoryDemo.Client1\IHttpClientFactoryDemo.Client1.csproj", "{E662F3CB-034A-46C9-B5B5-681CED1E9B2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Performance", "Performance", "{DA58307D-1F39-4B28-B7F1-0112494244FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotTraceNUnitTest", "DotTraceNUnitTest\DotTraceNUnitTest.csproj", "{AC19C9D2-3076-4C37-9AA1-7235128F4596}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -223,6 +227,10 @@ Global
 		{E662F3CB-034A-46C9-B5B5-681CED1E9B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E662F3CB-034A-46C9-B5B5-681CED1E9B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E662F3CB-034A-46C9-B5B5-681CED1E9B2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC19C9D2-3076-4C37-9AA1-7235128F4596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC19C9D2-3076-4C37-9AA1-7235128F4596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC19C9D2-3076-4C37-9AA1-7235128F4596}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC19C9D2-3076-4C37-9AA1-7235128F4596}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -260,6 +268,7 @@ Global
 		{EE90F728-290F-4D22-9D0B-54573FFD62A6} = {8AAD14A2-5C42-47A6-88D4-FD0E6BF3287B}
 		{104C72B3-4F6A-443E-B9CD-354010073DAD} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
 		{E662F3CB-034A-46C9-B5B5-681CED1E9B2A} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
+		{AC19C9D2-3076-4C37-9AA1-7235128F4596} = {DA58307D-1F39-4B28-B7F1-0112494244FF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AE9B06B-90CA-4B68-939A-30E8DC70B239}
