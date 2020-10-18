@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwaggerControllers", "Swagg
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwaggerDemo", "SwaggerDemo\SwaggerDemo.csproj", "{EB8C32E7-BB67-40B5-85F7-E5EFB3CB3246}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Autofac", "Autofac", "{7A5A2A74-E395-4572-9C01-A7AD37286156}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ioc", "Ioc", "{7A5A2A74-E395-4572-9C01-A7AD37286156}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutofacDemo", "AutofacDemo\AutofacDemo.csproj", "{C8053867-BE6E-4DB3-BDC1-FB20AEB5815B}"
 EndProject
@@ -91,7 +91,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IHttpClientFactoryDemo.Clie
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Performance", "Performance", "{DA58307D-1F39-4B28-B7F1-0112494244FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotTraceNUnitTest", "DotTraceNUnitTest\DotTraceNUnitTest.csproj", "{AC19C9D2-3076-4C37-9AA1-7235128F4596}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotTraceNUnitTest", "DotTraceNUnitTest\DotTraceNUnitTest.csproj", "{AC19C9D2-3076-4C37-9AA1-7235128F4596}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
