@@ -5,6 +5,8 @@ namespace CustomIocFramework.Services
     public interface IUserService
     {
         void SayHello(string name);
+
+        IOrderService GetOrderService();
     }
 
     public class UserService : IUserService
@@ -23,5 +25,11 @@ namespace CustomIocFramework.Services
         {
             Console.WriteLine($"Hello {name}");
         }
+
+        public IOrderService GetOrderService()
+        {
+            return m_orderService;
+        }
+
     }
 }
