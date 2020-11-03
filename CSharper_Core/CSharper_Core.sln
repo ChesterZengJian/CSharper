@@ -95,6 +95,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotTraceNUnitTest", "DotTra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomIocFramework", "CustomIocFramework\CustomIocFramework.csproj", "{28CECBDF-2DC6-462F-B673-EAB2074F79D0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lucene", "Lucene", "{B17D1267-01B0-48D9-9336-AF2EF24B0C79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuceneDemo", "LuceneDemo\LuceneDemo.csproj", "{439E8459-ADD4-44D5-A2EE-42E676A39095}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -237,6 +241,10 @@ Global
 		{28CECBDF-2DC6-462F-B673-EAB2074F79D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28CECBDF-2DC6-462F-B673-EAB2074F79D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28CECBDF-2DC6-462F-B673-EAB2074F79D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{439E8459-ADD4-44D5-A2EE-42E676A39095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439E8459-ADD4-44D5-A2EE-42E676A39095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439E8459-ADD4-44D5-A2EE-42E676A39095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439E8459-ADD4-44D5-A2EE-42E676A39095}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -276,6 +284,7 @@ Global
 		{E662F3CB-034A-46C9-B5B5-681CED1E9B2A} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
 		{AC19C9D2-3076-4C37-9AA1-7235128F4596} = {DA58307D-1F39-4B28-B7F1-0112494244FF}
 		{28CECBDF-2DC6-462F-B673-EAB2074F79D0} = {7A5A2A74-E395-4572-9C01-A7AD37286156}
+		{439E8459-ADD4-44D5-A2EE-42E676A39095} = {B17D1267-01B0-48D9-9336-AF2EF24B0C79}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AE9B06B-90CA-4B68-939A-30E8DC70B239}
