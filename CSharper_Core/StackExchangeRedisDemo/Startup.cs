@@ -31,6 +31,7 @@ namespace StackExchangeRedisDemo
             services.AddSingleton<IConnectionMultiplexer>(provider =>
                 ConnectionMultiplexer.Connect(Configuration.GetConnectionString("RedisConnectionString")));
             services.AddSingleton(provider => provider.GetRequiredService<IConnectionMultiplexer>().GetDatabase());
+            services.AddSingleton(provider => provider.GetRequiredService<IConnectionMultiplexer>().GetServer("192.168.3.126:6379"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
