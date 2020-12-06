@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Linq;
 using MongoDB.Driver;
 using System.Threading.Tasks;
 using MongoDB.Bson;
+using MongoDbDemo.Services;
 
 namespace MongoDbDemo
 {
@@ -9,10 +11,36 @@ namespace MongoDbDemo
     {
         private static async Task Main()
         {
-            const string connStr = @"mongodb://192.168.3.126:27017";
-            var dbClient = new MongoClient(connStr);
-            var db = dbClient.GetDatabase("sample_training");
-            var collection = db.GetCollection<BsonDocument>("grades");
+            var bookService = new BookService();
+
+            //await bookService.InsertBook();
+
+            //var books = await bookService.GetBooksAsync();
+            //Console.WriteLine("Book info:");
+            //books.ForEach(book =>
+            //{
+            //    Console.WriteLine($"Id: {book.Id}");
+            //    Console.WriteLine($"Author Id: {book.AuthorId}");
+            //});
+
+            Console.WriteLine();
+            var books = await bookService.GetBooksAsync("5fccfeb1f67169fd7da87159");
+            Console.WriteLine("Author info:");
+            books.ForEach(book =>
+            {
+                Console.WriteLine($"Id: {book.Id}");
+                Console.WriteLine($"Title: {book.Title}");
+                Console.WriteLine($"Books' count: {book.InnerAuthors.Count()}");
+                if (book.InnerAuthors.Any())
+                {
+                    Console.WriteLine($"Author's First name: {book.InnerAuthors.First().FirstName}");
+                }
+            });
+
+            //const string connStr = @"mongodb://192.168.3.127:27017";
+            //var dbClient = new MongoClient(connStr);
+            //var db = dbClient.GetDatabase("sample_training");
+            //var collection = db.GetCollection<BsonDocument>("grades");
 
             #region Get Databases
 
@@ -126,12 +154,12 @@ namespace MongoDbDemo
 
             #region Update Document
 
-            Console.WriteLine("Origin Document:\n");
-            var originDocuments = await collection.FindAsync(d => true);
-            foreach (var originDocument in originDocuments.ToList())
-            {
-                Console.WriteLine(originDocument);
-            }
+            //Console.WriteLine("Origin Document:\n");
+            //var originDocuments = await collection.FindAsync(d => true);
+            //foreach (var originDocument in originDocuments.ToList())
+            //{
+            //    Console.WriteLine(originDocument);
+            //}
 
             // ----------------------------
             // Update One
@@ -151,14 +179,12 @@ namespace MongoDbDemo
             //await collection.UpdateOneAsync(filter, update);
             //await collection.UpdateManyAsync(filter, update);
 
-
-
-            Console.WriteLine("\n After update: \n");
-            var destDocuments = await collection.FindAsync(d => true);
-            foreach (var destDocument in destDocuments.ToEnumerable())
-            {
-                Console.WriteLine(destDocument);
-            }
+            //Console.WriteLine("\n After update: \n");
+            //var destDocuments = await collection.FindAsync(d => true);
+            //foreach (var destDocument in destDocuments.ToEnumerable())
+            //{
+            //    Console.WriteLine(destDocument);
+            //}
 
             #endregion
 
