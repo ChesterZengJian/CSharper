@@ -27,6 +27,7 @@ namespace EFCoreDemo
             services.AddControllersWithViews();
 
             services.AddDbContext<SchoolContext>(options => options.UseMySql(Configuration.GetConnectionString("SchoolContext")));
+            services.AddDbContext<CompanyContext>(options => options.UseMySql(Configuration.GetConnectionString("CompanyContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

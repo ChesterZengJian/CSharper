@@ -37,8 +37,10 @@ namespace EFCoreDemo
                 try
                 {
                     var context = services.GetRequiredService<SchoolContext>();
-                    //context.Database.EnsureCreated();
-                    DbInitializer.Initialize(context);
+                    context.Database.EnsureCreated();
+                    var companyContext = services.GetRequiredService<CompanyContext>();
+                    companyContext.Database.EnsureCreated();
+                    //DbInitializer.Initialize(context);
                 }
                 catch (Exception e)
                 {
