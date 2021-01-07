@@ -60,6 +60,14 @@ namespace MiddlewareDemo
                 };
             });
 
+            app.Run(async context =>
+            {
+                Console.WriteLine("app.Run");
+                await context.Response.WriteAsync("app.Run, Start <br />");
+                //await next.Invoke(context);
+                await context.Response.WriteAsync("app.Run, End <br />");
+            });
+
             app.Use(next =>
             {
                 return async context =>
