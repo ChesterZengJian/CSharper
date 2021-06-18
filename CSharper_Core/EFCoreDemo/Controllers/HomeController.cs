@@ -22,7 +22,7 @@ namespace EFCoreDemo.Controllers
             m_schoolContext = schoolContext;
         }
 
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult<string>> Index()
         {
             var students = await m_schoolContext.Students.ToListAsync();
             var student = await m_schoolContext.Students
@@ -30,9 +30,14 @@ namespace EFCoreDemo.Controllers
                 //.ThenInclude(e => e.Course)
                 //.AsNoTracking()
                 .FirstOrDefaultAsync(m => m.Id == 1);
-            var course = await m_schoolContext.Courses.FirstOrDefaultAsync(c => c.CourseId == 1050);
+            Console.WriteLine($"Before change table, IsUseCoursePartition = {m_schoolContext.IsUseCoursePartition}, the table is '{m_schoolContext.Model.FindEntityType(typeof(Course)).GetTableName()}'");
+            await using (var schoolDbContext = new SchoolContext { IsUseCoursePartition = true })
+            {
+                Console.WriteLine($"After new context, IsUseCoursePartition = {schoolDbContext.IsUseCoursePartition}, the table is '{schoolDbContext.Model.FindEntityType(typeof(Course)).GetTableName()}'");
+            }
+            var course = await m_schoolContext.Courses.FirstOrDefaultAsync();
             var enrollment = await m_schoolContext.Enrollments.FirstOrDefaultAsync(e => e.EnrollmentId == 1);
-            return View();
+            return course.Title;
         }
 
         public IActionResult Privacy()
