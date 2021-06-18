@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.IO;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
 
 namespace IOSerializeDemo
 {
@@ -12,12 +8,14 @@ namespace IOSerializeDemo
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(0.1+0.2);
+
             {
                 //var logPath = ConfigurationManager.AppSettings["LogPath"].ToString();
 
                 //Console.WriteLine(Path.Combine(@"F:\Dockers", "info.exe"));
 
-                var filePath = Path.Combine(@"F:\Dockers\test1", "text.txt");
+                //var filePath = Path.Combine(@"F:\Dockers\test1", "text.txt");
 
                 //using var fileStream = File.Create(Path.Combine(@"F:\Dockers\test1", "text.txt"));
                 //var name = "231423sdfafa";
@@ -95,8 +93,42 @@ namespace IOSerializeDemo
             }
 
             {
+                //var directoryPath = string.Empty;
 
+                //while (string.IsNullOrEmpty(directoryPath))
+                //{
+                //    Console.WriteLine("Input your directory path:");
+                //    directoryPath = Console.ReadLine();
+                //}
 
+                //var directory = new DirectoryInfo(directoryPath);
+                //var childrenDirectories = directory.GetDirectories();
+                //var emptyDirectories = new List<DirectoryInfo>();
+                //Console.WriteLine($"There are {childrenDirectories.Length} children directories and {directory.GetFiles().Length} files. Here are the details:");
+
+                //foreach (var directoryInfo in childrenDirectories)
+                //{
+                //    Console.WriteLine($"{directoryInfo.Name}");
+                //    Console.WriteLine($"\tChildren folders: {directoryInfo.GetDirectories().Length}");
+                //    Console.WriteLine($"\tFiles: {directoryInfo.GetFiles().Length}");
+
+                //    if (directoryInfo.GetDirectories().Length == 0 && directoryInfo.GetFiles().Length == 0)
+                //    {
+                //        emptyDirectories.Add(directoryInfo);
+                //    }
+                //}
+
+                //Console.WriteLine($"Choice your operation:");
+                //Console.WriteLine("D: Delete empty directories");
+                //switch (Console.ReadKey().Key)
+                //{
+                //    case ConsoleKey.D:
+                //        DeleteDirectories(emptyDirectories);
+                //        break;
+                //    default:
+                //        Console.WriteLine("Unsupported operation");
+                //        break;
+                //}
             }
         }
 
@@ -124,6 +156,14 @@ namespace IOSerializeDemo
             }
 
             return directoryInfos;
+        }
+
+        private static void DeleteDirectories(List<DirectoryInfo> directoryInfos)
+        {
+            foreach (var directoryInfo in directoryInfos)
+            {
+                directoryInfo.Delete();
+            }
         }
     }
 }
