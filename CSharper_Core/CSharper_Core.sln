@@ -127,7 +127,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Crawler", "Crawler", "{2C6F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataCrawler", "DataCrawler\DataCrawler.csproj", "{CBCD9033-F56E-425A-AF69-63142599DF03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPLDataflowDemo", "TPLDataflowDemo\TPLDataflowDemo.csproj", "{F030ED92-7755-4186-9DFA-43362D55EDCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPLDataflowDemo", "TPLDataflowDemo\TPLDataflowDemo.csproj", "{F030ED92-7755-4186-9DFA-43362D55EDCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspectCoreDemo", "AspectCoreDemo\AspectCoreDemo.csproj", "{4C591408-FE0C-4431-BED9-B8125FC0A72C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -315,6 +317,10 @@ Global
 		{F030ED92-7755-4186-9DFA-43362D55EDCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F030ED92-7755-4186-9DFA-43362D55EDCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F030ED92-7755-4186-9DFA-43362D55EDCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C591408-FE0C-4431-BED9-B8125FC0A72C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C591408-FE0C-4431-BED9-B8125FC0A72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C591408-FE0C-4431-BED9-B8125FC0A72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C591408-FE0C-4431-BED9-B8125FC0A72C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -365,6 +371,7 @@ Global
 		{F6F289C1-D874-4A02-BA2E-B5613F393113} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
 		{CBCD9033-F56E-425A-AF69-63142599DF03} = {2C6FF9EF-0DF1-4018-8A94-10D8A66F5234}
 		{F030ED92-7755-4186-9DFA-43362D55EDCA} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
+		{4C591408-FE0C-4431-BED9-B8125FC0A72C} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AE9B06B-90CA-4B68-939A-30E8DC70B239}
