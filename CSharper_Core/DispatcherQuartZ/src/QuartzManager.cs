@@ -29,7 +29,25 @@ namespace DispatcherQuartZ
                 .Build();
             trigger.JobDataMap.Add("studentTrigger", "good student trigger");
 
+            var trigger2 = TriggerBuilder.Create()
+                .WithIdentity("t2", "g1")
+                .WithSimpleSchedule(builder =>
+                {
+                    builder.WithIntervalInSeconds(3)
+                        .WithMisfireHandlingInstructionFireNow()
+                        .WithRepeatCount(3);
+                })
+                .WithDescription("A test of quartz 2")
+                //.WithCronSchedule("1/2 * * * * ?")
+                .Build();
+            trigger2.JobDataMap.Add("studentTrigger", "good student trigger2");
+
+            var job2 = JobBuilder.Create<SendMessageJob>().Build();
+            job2.JobDataMap.Add("student", "good student2");
+            job2.JobDataMap.Add("count", 0);
+
             await scheduler.ScheduleJob(job, trigger);
+            await scheduler.ScheduleJob(job2, trigger2);
             await scheduler.Start();
         }
     }

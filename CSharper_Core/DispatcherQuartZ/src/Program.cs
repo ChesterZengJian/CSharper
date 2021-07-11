@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Threading.Tasks;
+using Quartz;
+using Quartz.Impl;
 
 namespace DispatcherQuartZ
 {
