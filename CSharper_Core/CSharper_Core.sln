@@ -129,7 +129,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataCrawler", "DataCrawler\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPLDataflowDemo", "TPLDataflowDemo\TPLDataflowDemo.csproj", "{F030ED92-7755-4186-9DFA-43362D55EDCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspectCoreDemo", "AspectCoreDemo\AspectCoreDemo.csproj", "{4C591408-FE0C-4431-BED9-B8125FC0A72C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspectCoreDemo", "AspectCoreDemo\AspectCoreDemo.csproj", "{4C591408-FE0C-4431-BED9-B8125FC0A72C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuartZ.Web", "QuartZ.Web\QuartZ.Web.csproj", "{0B454F7A-A1AD-437D-A1F8-28EC050CD818}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CqSamples.Quartz3.AspNetCore.Simple", "..\..\..\SourceCode_Github\CrystalQuartz\examples\09_Quartz3_AspNetCore_Web\CqSamples.Quartz3.AspNetCore.Simple\CqSamples.Quartz3.AspNetCore.Simple.csproj", "{C1B34AE0-9E75-471C-BE15-3B7B8B13330A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -321,6 +325,14 @@ Global
 		{4C591408-FE0C-4431-BED9-B8125FC0A72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C591408-FE0C-4431-BED9-B8125FC0A72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C591408-FE0C-4431-BED9-B8125FC0A72C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B454F7A-A1AD-437D-A1F8-28EC050CD818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B454F7A-A1AD-437D-A1F8-28EC050CD818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B454F7A-A1AD-437D-A1F8-28EC050CD818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B454F7A-A1AD-437D-A1F8-28EC050CD818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1B34AE0-9E75-471C-BE15-3B7B8B13330A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1B34AE0-9E75-471C-BE15-3B7B8B13330A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1B34AE0-9E75-471C-BE15-3B7B8B13330A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1B34AE0-9E75-471C-BE15-3B7B8B13330A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -372,6 +384,8 @@ Global
 		{CBCD9033-F56E-425A-AF69-63142599DF03} = {2C6FF9EF-0DF1-4018-8A94-10D8A66F5234}
 		{F030ED92-7755-4186-9DFA-43362D55EDCA} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
 		{4C591408-FE0C-4431-BED9-B8125FC0A72C} = {66314E2B-B294-4F98-8FA3-36EFAE421225}
+		{0B454F7A-A1AD-437D-A1F8-28EC050CD818} = {BBD169BB-1F4C-4FB4-BD8A-83A37E541797}
+		{C1B34AE0-9E75-471C-BE15-3B7B8B13330A} = {BBD169BB-1F4C-4FB4-BD8A-83A37E541797}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AE9B06B-90CA-4B68-939A-30E8DC70B239}
