@@ -19,9 +19,15 @@ namespace Construction.DesignPatterns
         public Type[] ImplementorList { get { return mImplementorList; } set { mImplementorList = value; } }
     }
     [InventoryPartAttribute(enmInvParts.Monitors)]
-    class MonitorInventory : IPartsInventory { public void Restock() { Console.WriteLine("monitor inventory restocked"); } }
+    class MonitorInventory : IPartsInventory
+    {
+        public void Restock() { Console.WriteLine("monitor inventory restocked"); }
+    }
     [InventoryPartAttribute(enmInvParts.Keyboards)]
-    class KeyboardInventory : IPartsInventory { public void Restock() { Console.WriteLine("keyboard inventory restocked"); } }
+    class KeyboardInventory : IPartsInventory
+    {
+        public void Restock() { Console.WriteLine("keyboard inventory restocked"); }
+    }
     [ImplAttr(new Type[] { typeof(MonitorInventory), typeof(KeyboardInventory) })]
     interface IPartsInventory { public void Restock(); }
     class PartsFactory
