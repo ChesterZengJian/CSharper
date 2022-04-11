@@ -2,6 +2,8 @@
 using System;
 using RabbitMQ.Client.Events;
 using System.Text;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace RabbitmqConsumer
 {
@@ -9,23 +11,33 @@ namespace RabbitmqConsumer
     {
         static void Main(string[] args)
         {
-            var connectionFactory = new ConnectionFactory
+            var factory = new ConnectionFactory
             {
-                UserName = "chester",
-                Password = "123456",
-                HostName = "192.168.3.125"
+                Uri = new Uri("amqp://test:123456@chestervm-126.com:5672//")
             };
 
-            var connection = connectionFactory.CreateConnection();
+            var connection = factory.CreateConnection();
             var channel = connection.CreateModel();
             var eventConsumer = new EventingBasicConsumer(channel);
-            eventConsumer.Received += (ch, es) =>
+
+            const string queue = "chester.test.001";
+
+            eventConsumer.Received += (model, deliverEventArgs) =>
             {
-                var msg = Encoding.UTF8.GetString(es.Body.ToArray());
-                Console.WriteLine($"Receive the message: {msg}");
-                channel.BasicAck(es.DeliveryTag, false);
+                var msg = Encoding.UTF8.GetString(deliverEventArgs.Body.ToArray());
+                Console.WriteLine($"Receive the message: {msg}, {nameof(deliverEventArgs.DeliveryTag)}: {deliverEventArgs.DeliveryTag}");
+                channel.BasicNack(deliveryTag: deliverEventArgs.DeliveryTag, multiple: false, requeue: false);
+                channel.BasicReject(deliveryTag: deliverEventArgs.DeliveryTag, requeue: false);
+                //channel.BasicAck(deliveryTag: deliverEventArgs.DeliveryTag, multiple: false);
             };
-            channel.BasicConsume("hello", false, eventConsumer);
+
+            channel.BasicConsume(queue: queue, autoAck: false, consumer: eventConsumer);
+
+            // 只获取数据不将数据从队列删除
+            //var result = channel.BasicGet(queue: queue, autoAck: false);
+            //var msg = Encoding.UTF8.GetString(result.Body.ToArray());
+            //Console.WriteLine($"Receive the message: {msg}, {nameof(result.DeliveryTag)}: {result.DeliveryTag}");
+
             Console.WriteLine("Consumer has started");
             Console.Read();
             channel.Dispose();
