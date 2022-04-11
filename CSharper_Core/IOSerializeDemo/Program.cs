@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 
 namespace IOSerializeDemo
@@ -8,7 +10,41 @@ namespace IOSerializeDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(0.1+0.2);
+            {
+                //var forest = new Tree<string>("root");
+                //var current = forest;
+                //var paths = new List<string>
+                //{
+                //    "a/b/c/d/e",
+                //    "a/b/e/f/g",
+                //    "a/b/h",
+                //    "a/i/j",
+                //    "a/i/k"
+                //};
+
+                //foreach (var path in paths)
+                //{
+                //    var root = current;
+                //    foreach (var data in path.Split("/"))
+                //    {
+                //        current = current.Child(data);
+                //    }
+                //    current = root;
+                //}
+
+                //forest.Accept(new TreeVisitor());
+                //Console.WriteLine(JsonConvert.SerializeObject(forest));
+            }
+
+            {
+                //var st = new Stopwatch();
+                //st.Start();
+                //var dirHelper = new DirectoryHelper(@"E:\Game");
+                //dirHelper.GetFile();
+                ////dirHelper.Print();
+                //st.Stop();
+                //Console.WriteLine(st.ElapsedMilliseconds);
+            }
 
             {
                 //var logPath = ConfigurationManager.AppSettings["LogPath"].ToString();
