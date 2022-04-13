@@ -28,10 +28,14 @@ namespace SyncCounter
 
         //    await Clients.All.SendAsync("Finished");
         //}
-        public void Send(string message)
+        public async Task Send(string message)
         {
-            Clients.All.SendSomething(message);
+            Console.WriteLine($"Send {message}");
+            //Clients.All.SendSomething(message);
+
+            await Task.CompletedTask;
         }
+
         public override async Task OnConnectedAsync()
         {
             var connectionId = Context.ConnectionId;
