@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EFCoreDemo.Data;
+using EFCoreDemo.HostedServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,8 +28,18 @@ namespace EFCoreDemo
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<SchoolContext>(options => options.UseMySql(Configuration.GetConnectionString("SchoolContext")));
-            services.AddDbContext<CompanyContext>(options => options.UseMySql(Configuration.GetConnectionString("CompanyContext")));
+            services.AddDbContext<SchoolContext>(options =>
+            {
+                //options.UseMySql(Configuration.GetConnectionString("SchoolContext"));
+                options.UseInMemoryDatabase("School")
+                    .ConfigureWarnings(b => b.Ignore(InMemoryEventId.TransactionIgnoredWarning));
+            });
+            services.AddDbContext<CompanyContext>(options =>
+            {
+                options.UseInMemoryDatabase("testDb");
+                //options.UseMySql(Configuration.GetConnectionString("CompanyContext"));
+            });
+            services.AddHostedService<SchoolContextHostedService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

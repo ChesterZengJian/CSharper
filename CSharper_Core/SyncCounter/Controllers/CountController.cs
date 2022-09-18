@@ -36,7 +36,7 @@ namespace SyncCounter.Controllers
         [HttpGet]
         public async Task<string> Get()
         {
-            await _countHubContext.Clients.All.SendSomething("Someone get things");
+            await _countHubContext.Clients.All.ReceiveSomeMessage("Someone get things");
 
             return "Test SignalR";
         }

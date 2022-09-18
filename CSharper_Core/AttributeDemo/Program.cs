@@ -1,6 +1,8 @@
 ﻿using AttributeDemo.Attributes;
 using AttributeDemo.Models;
 using System;
+using System.Text;
+using System.Web;
 using AttributeDemo.Extensions;
 
 namespace AttributeDemo
@@ -9,19 +11,27 @@ namespace AttributeDemo
     {
         static void Main(string[] args)
         {
-            var student = new Student
-            {
-                Id = "1",
-                Name = "C"
-            };
-            student.Required();
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);//注册Nuget包System.Text.Encoding.CodePages中的编码到.NET Core
+            var str =
+                "timestamp=1654172738&cpid=9829&password=d63038ea22041c2a6135c7d4a9efa9da&channelid=12863&tele=15229326166&msg=hello端午快乐";
+            //var res = HttpUtility.UrlEncode("hello端午节快乐", Encoding.GetEncoding("GBK"));
+            var res = HttpUtility.UrlEncode(str, Encoding.GetEncoding("GBK"));
 
-            //CustomAttributeExtension.Show<Student>();
+            Console.WriteLine(res);
 
-            //ValidateAttributeExtension.ValidateMaxLength<Student>(student);
-            //ValidateAttributeExtension.Validate<Student>(student);
+            //var student = new Student
+            //{
+            //    Id = "1",
+            //    Name = "C"
+            //};
+            //student.Required();
 
-            Console.WriteLine("Hello World!");
+            ////CustomAttributeExtension.Show<Student>();
+
+            ////ValidateAttributeExtension.ValidateMaxLength<Student>(student);
+            ////ValidateAttributeExtension.Validate<Student>(student);
+
+            //Console.WriteLine("Hello World!");
         }
     }
 }

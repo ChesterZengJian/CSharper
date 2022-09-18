@@ -27,9 +27,9 @@ namespace EFCoreDemo.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             Console.WriteLine($"OnConfiguring:{this.GetHashCode()}");
-            optionsBuilder
-                .UseMySql("Server=192.168.3.127;Port=3306;Database=ContosoUniversityContext;Uid=root;Pwd=123456;")
-                .ReplaceService<IModelCacheKeyFactory, DynamicModelCacheKeyFactory>();
+            //optionsBuilder
+                //.UseMySql("Server=192.168.3.127;Port=3306;Database=ContosoUniversityContext;Uid=root;Pwd=123456;")
+                //.ReplaceService<IModelCacheKeyFactory, DynamicModelCacheKeyFactory>();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

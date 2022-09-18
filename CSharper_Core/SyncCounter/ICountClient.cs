@@ -8,6 +8,6 @@ namespace SyncCounter
 {
     public interface ICountClient
     {
-        Task SendSomething(string msg);
+        Task ReceiveSomeMessage(string msg);
     }
 }

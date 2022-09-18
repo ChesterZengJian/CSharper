@@ -31,7 +31,7 @@ namespace SyncCounter
         public async Task Send(string message)
         {
             Console.WriteLine($"Send {message}");
-            //Clients.All.SendSomething(message);
+            //Clients.All.ReceiveSomeMessage(message);
 
             await Task.CompletedTask;
         }
@@ -40,13 +40,13 @@ namespace SyncCounter
         {
             var connectionId = Context.ConnectionId;
             var client = Clients.Client(connectionId);
-            await client.SendSomething("Has Connected");
+            await client.ReceiveSomeMessage("Has Connected");
         }
         public override async Task OnDisconnectedAsync(Exception exception)
         {
             var connectionId = Context.ConnectionId;
             var client = Clients.Client(connectionId);
-            await client.SendSomething("Has DisConnected");
+            await client.ReceiveSomeMessage("Has DisConnected");
         }
     }
 }
